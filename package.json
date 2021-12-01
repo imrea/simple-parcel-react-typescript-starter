@@ -7,7 +7,12 @@
     "prebuild": "rm -rf dist",
     "start": "parcel",
     "build": "parcel build",
-    "lint": "eslint --ext .ts,.tsx src/"
+    "prepare": "husky install",
+    "lint": "eslint --ext .js,.jsx,.ts,.tsx ./src",
+    "pretty": "prettier 'src/**/*.[jt]s?(x)' --write",
+    "cz": "git-cz",
+    "cs": "changeset",
+    "csv": "changeset version"
   },
   "source": "src/index.html",
   "dependencies": {
@@ -19,17 +24,18 @@
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "tailwindcss": "^2.2.19",
-    "typescript": "^4.4.4"
+    "typescript": "^4.5.2"
   },
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^5.3.1",
-    "@typescript-eslint/parser": "^5.3.1",
-    "eslint": "^7.32.0",
-    "eslint-config-airbnb": "^19.0.0",
-    "eslint-import-resolver-typescript": "^2.5.0",
-    "eslint-plugin-import": "^2.25.3",
-    "eslint-plugin-jsx-a11y": "^6.5.1",
-    "eslint-plugin-react": "^7.27.0",
-    "eslint-plugin-react-hooks": "^4.3.0"
+    "@changesets/cli": "^2.18.1",
+    "@typescript-eslint/eslint-plugin": "^5.5.0",
+    "@typescript-eslint/parser": "^5.5.0",
+    "eslint": "^8.3.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-react": "^7.27.1",
+    "eslint-plugin-react-hooks": "^4.3.0",
+    "git-cz": "^4.8.0",
+    "husky": "^7.0.4",
+    "prettier": "^2.5.0"
   }
 }

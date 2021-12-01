@@ -1,0 +1,4 @@
+.changeset
+.parcel-cache
+dist
+*.d.ts
